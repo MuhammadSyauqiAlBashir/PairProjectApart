@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartement Syariah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+
+<body style="background-image: url(https://media.dekoruma.com/dekohouse/property/real-estate/INTL-ASQR/tower/apartemen-south-quarter-tb-simatupang-jakarta-selatan-tower-d-tower2.jpg?bg-color=FFFFFF&dpr=1.5&fit=crop&height=412&optimize=medium&quality=50&width=412); background-size: cover;">
+
+  <form id="hostForm" class="container mt-5 card" action="/host/apartement/<%= idapartement %>/add" method="post">
+    <h2 class="mb-4 mt-5">Room Add Form</h2>
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" id="name" name="name" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Room number:</label>
+      <input type="number" id="name" name="roomNumber" class="form-control" required>
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-primary mb-5">
+  
+  </form>
+
+</body>
+
+</html>

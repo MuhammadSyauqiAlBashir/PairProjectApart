@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartement Syariah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+
+<body style="background-image: url(https://media.dekoruma.com/dekohouse/property/real-estate/INTL-ASQR/tower/apartemen-south-quarter-tb-simatupang-jakarta-selatan-tower-d-tower2.jpg?bg-color=FFFFFF&dpr=1.5&fit=crop&height=412&optimize=medium&quality=50&width=412); background-size: cover;">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <h1 class="navbar-brand">Apartement Syariah, Your Syariah Planner 😊</h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/<%= data.role.toLowerCase() %>/apartement">Apartement</a>
+          </li>
+          <% if (data.role === 'Host') { %>
+            <li class="nav-item" style="width: 300px;">
+              <a class="nav-link" href="/<%= data.role.toLowerCase() %>/apartement/add">Add Apartement</a>
+            </li>
+            <li class="nav-item">
+              <a style="margin-left: 500px;" class="nav-link" href="/logout" id="logoutLink">Logout</a>
+            </li>
+          <% }else {%>
+            <li class="nav-item">
+              <a class="nav-link" href="/<%= data.role.toLowerCase() %>/profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a style="margin-left: 750px;" class="nav-link" href="/logout" id="logoutLink">Logout</a>
+            </li>
+          <%} %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-header">
+          Halo !
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Selamat datang <%=dataProfile%>, daftar bookingan anda terdapat pada apartemen berikut :</h5>
+        </div>
+      </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4 container mt-5 mb-5">
+            <% data.Apartements.forEach(item => { %>
+            <div class="col">
+              <div class="card h-100">
+                <img src="<%= item.imgUrl %>" class="card-img-top" alt="image">
+                <div class="card-body">
+                  <h4 class="card-title"><%= item.name %></h4>
+                  <h5 class="card-subtitle">Bintang <%= item.rate %></h5>
+                  <h5 class="card-subtitle"><%= item.formatToIdr %> </h5>
+                  <h5 class="card-subtitle"><%= item.location %></h5>
+                  <h6 class="card-body"><%= item.facility %></h6>
+                </div>
+              </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>

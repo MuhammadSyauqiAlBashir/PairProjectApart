@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartement Syariah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body style="background-image: url(https://media.dekoruma.com/dekohouse/property/real-estate/INTL-ASQR/tower/apartemen-south-quarter-tb-simatupang-jakarta-selatan-tower-d-tower2.jpg?bg-color=FFFFFF&dpr=1.5&fit=crop&height=412&optimize=medium&quality=50&width=412); background-size: cover;">
+    <%- include('./partials/_navbar') %>
+    <div class="container mt-5">
+      <% if (info) { %>
+      <h1 style="margin-left: 530px;" class="btn btn-danger"><%= info %></h1>
+      <% } %>
+      <% if (user.role === 'Guest') { %>
+      <form action="/guest/apartement" method="get" class="mb-3">
+        <div class="input-group">
+          <input type="text" name="search" class="form-control" placeholder="Search" style="height: 50px;">
+          <input type="submit" value="Search" class="btn btn-primary">
+        </div>
+      </form>
+      <% } %>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <% data.forEach(el => { %>
+        <div class="col">
+          <div class="card h-100">
+            <img src="<%= el.imgUrl %>" class="card-img-top" alt="image">
+            <div class="card-body">
+              <h4 class="card-title"><%= el.name %></h4>
+              <h5 class="card-subtitle">Bintang <%= el.rate %></h5>
+              <h5 class="card-subtitle"><%= el.formatToIdr %> </h5>
+              <h5 class="card-subtitle"><%= el.location %></h5>
+              <h6 class="card-body"><%= el.facility %></h6>
+              <% if (el.Rooms.length > 0) { %>
+              <h6>Room:</h6>
+              <ul>
+                <% el.Rooms.forEach(room => { %>
+                <li><%= room.name %></li>
+                <% }) %>
+              </ul>
+              <% } %>
+              <% if (user.role === 'Guest') { %>
+              <a href="/guest/apartement/<%= el.id %>/form" class="btn btn-primary ">Booking</a>
+              <% } else { %>
+              <a href="/host/apartement/<%= el.id %>/add" class="btn btn-primary">Add Room</a>
+              <a href="/host/apartement/<%= el.id %>/edit" class="btn btn-primary">Edit</a>
+              <a href="/host/apartement/<%= el.id %>/delete" class="btn btn-primary">Delete</a>
+              <% } %>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>

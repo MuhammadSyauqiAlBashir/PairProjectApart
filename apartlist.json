@@ -5,7 +5,7 @@
         "facility" : "Breakfast, Gym, Swimming Pool, Non Smoking, Free Airprot transfer",
         "price" : 900000,
         "location" : "Jl. Pondok Indah No.69",
-        "imageUrl" : "https://www.blibli.com/friends-backend/wp-content/uploads/2023/10/B1000203-Cover-apartemen-di-jakarta-selatan.jpg"
+        "imgUrl" : "https://www.blibli.com/friends-backend/wp-content/uploads/2023/10/B1000203-Cover-apartemen-di-jakarta-selatan.jpg"
     },
     {
         "name" : "Apartement Grogol",
@@ -13,27 +13,27 @@
         "facility" : "Breakfast,Yakuzi, Non Smoking, Free Airprot transfer",
         "price" : 500000,
         "location" : "Jl. Grogol No.69",
-        "imageUrl" : "https://events.rumah123.com/wp-content/uploads/sites/38/2020/06/04150557/Rekomendasi-Apartemen-Jakarta-Barat.jpg"
+        "imgUrl" : "https://events.rumah123.com/wp-content/uploads/sites/38/2020/06/04150557/Rekomendasi-Apartemen-Jakarta-Barat.jpg"
     },    {
         "name" : "Apartement Condet",
         "rate" : 10,
         "facility" : "Breakfast, Gym, Swimming Pool, Non Smoking, Free Pick Up transport, 4 Rooms included",
         "price" : 1000000,
         "location" : "Jl. Raya Condet No.69",
-        "imageUrl" : "https://cdnaz.cekaja.com/media/2020/11/294_Artikel-CA20-rekomendasi-apartemen-murah-di-jakarta.jpg"
+        "imgUrl" : "https://cdnaz.cekaja.com/media/2020/11/294_Artikel-CA20-rekomendasi-apartemen-murah-di-jakarta.jpg"
     },    {
         "name" : "Apartement Radio Dalam",
         "rate" : 6,
         "facility" : "Non Smoking",
         "price" : 300000,
         "location" : "Jl. Radio Dalam No.69",
-        "imageUrl" : "https://static.republika.co.id/uploads/images/inpicture_slide/026368900-1676377039-830-556.jpg"
+        "imgUrl" : "https://static.republika.co.id/uploads/images/inpicture_slide/026368900-1676377039-830-556.jpg"
     },    {
         "name" : "Apartement Kramat Jati",
         "rate" : 8,
         "facility" : "Breakfast, Swimming Pool, Non Smoking, Free Airprot transfer",
         "price" : 700000,
         "location" : "Jl. Kramat Jati No.69",
-        "imageUrl" : "https://static.republika.co.id/uploads/images/inpicture_slide/026368900-1676377039-830-556.jpg"
+        "imgUrl" : "https://static.republika.co.id/uploads/images/inpicture_slide/026368900-1676377039-830-556.jpg"
     }
 ]

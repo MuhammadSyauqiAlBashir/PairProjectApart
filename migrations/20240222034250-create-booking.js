@@ -17,6 +17,7 @@ module.exports = {
           },
           key: 'id'
         },
+        onDelete : 'cascade'
       },
       ApartementId: {
         type: Sequelize.INTEGER,
@@ -26,6 +27,7 @@ module.exports = {
           },
           key: 'id'
         },
+        onDelete : 'cascade'
       },
       startDate: {
         type: Sequelize.DATE
